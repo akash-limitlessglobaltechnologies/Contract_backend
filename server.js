@@ -26,7 +26,7 @@ const connectDb = async () => {
     }
 };
 
-// Middleware
+
 app.use(cors({
     origin: process.env.FRONTEND_URL,
     credentials: true,

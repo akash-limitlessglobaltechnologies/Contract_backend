@@ -9,7 +9,7 @@ const userRoutes = require('./routes/userRoutes');
 const authRoutes = require('./routes/authRoutes');
 const contractRoutes = require('./routes/contractRoutes');
 
-// Create Express app
+
 const app = express();
 
 // Database connection function

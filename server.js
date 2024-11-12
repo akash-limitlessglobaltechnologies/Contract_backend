@@ -55,6 +55,13 @@ app.use(expressSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.get('/', (req, res) => {
+    res.json({
+        status: 'success',
+        message: 'API is running'
+    });
+});
+
 // Routes
 app.use('/auth', authRoutes);
 app.use('/api', userRoutes);

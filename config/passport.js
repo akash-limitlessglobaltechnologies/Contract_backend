@@ -27,10 +27,7 @@ passport.use(new GoogleStrategy({
         
         if (!user) {
             const email = profile.emails[0].value;
-            if (!email.endsWith('@limitlessglobaltechnologies.com')) {
-                return done(null, false, { message: 'Email domain not allowed' });
-            }
-
+            
             user = await ContractUser.create({
                 googleId: profile.id,
                 email: email,

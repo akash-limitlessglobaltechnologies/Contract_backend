@@ -6,8 +6,8 @@ const userController = require('../controllers/userController');
 router.get('/google',
     passport.authenticate('google', { 
         scope: ['profile', 'email'],
-        prompt: 'select_account',
-        hd: 'limitlessglobaltechnologies.com'
+        prompt: 'select_account'
+        // Removed 'hd' parameter that was restricting to limitlessglobaltechnologies.com domain
     })
 );
 
